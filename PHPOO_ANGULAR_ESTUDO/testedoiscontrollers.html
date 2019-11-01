@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="Meuapp">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    </head>
+    <body>
+        <h1>Entendendo os Controladores - Herança de $scope</h1>
+        <!--Declaração do nosso MeuController-->
+        <div class="heranca">
+            <div ng-controller="PaiController">
+                <p>Eu sou {{nome}} {{sobrenome}}!</p>
+                <div ng-controller="FilhoController">
+                    <p>Eu sou {{nome}} {{sobrenome}}</p>
+                    <div ng-controller="NetoController">
+                        <p>Eu sou {{nome}} {{sobrenome}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        
+        Digite seu nome: <input type="text" ng-model="nome" placeholder="Diz teu nome aí"><br>
+        Nome: <span ng-bind="nome"></span>
+        
+        <br>
+        
+        <div ng-controller="soma2">
+        <p>Soma de dois números:</p>
+        <p>Primeiro número: <input type="number" ng-model="valor1" ></p>
+        <p>Segundo número: <input type="number" ng-model="valor2"></p>
+        Soma direto pelo bind: <span ng-bind="valor1 + valor2"></span><br>
+        <p>Soma por função na controller: <input type="number" ng-model="total" ng-click="somaValores()"></p>
+        </div>
+        
+        <!-- LISTA E COLEÇÃO DE OBJETOS -->
+        <div data-ng-init="nomes=['Claudia', 'Valdemir', 'Neto']">
+            <ul>
+                
+                <li ng-repeat='x in nomes'><span ng-bind='x'></span></li>
+                
+            </ul>
+            
+        </div>
+        
+        <div ng-init='listaNomePais=[{nome: "Renan", pais: "Brasil"},{nome: "Gustav", pais: "Alemanha"}]'>
+            
+            <ul>
+                <li ng-repeat="x in listaNomePais">
+                    <span ng-bind="x.nome+ ', '+ x.pais"></span>
+                </li>    
+                
+            </ul>
+        </div>
+         
+        <!-- VALIDAÇÃO DE CAMPOS-->
+
+       <form  name="meuForm">
+          Email:
+            <input type="email" name="meuEndereco" ng-model="texto">
+            <span ng-show="meuForm.meuEndereco.$error.email">Não é um endereço de email válido</span>
+       </form>
+        
+        
+        
+        <script>
+            var app = angular.module('Meuapp',[]);
+            
+            app.controller('PaiController',['$scope',function($scope){
+                $scope.nome = 'Gabriel';
+                $scope.sobrenome='Feitosa';
+            }]); 
+            
+            app.controller('FilhoController',['$scope',function($scope){
+                $scope.nome = 'Lampião';
+            }]); 	
+            
+            app.controller('NetoController',['$scope',function($scope){
+                $scope.sobrenome='Junior';
+            }]); 
+        
+           app.controller('soma2', ['$scope', function($scope){
+                   
+                   $scope.somaValores = function(){
+                       $scope.total=$scope.valor1 + $scope.valor2;
+                   }
+                   
+           
+            }]);
+        </script>
+</body>
+</html>

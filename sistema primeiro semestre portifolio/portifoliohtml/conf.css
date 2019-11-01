@@ -1,0 +1,258 @@
+* {
+pandding: 0;
+margin: 1;
+}
+
+#menu ul li {
+
+	display: inline;
+	
+	
+}
+#menu2 ul{
+
+
+
+
+}
+
+#menu2 ul li {
+
+	list-style: none;
+	width: 35 px;
+	height: 37px;
+	line-height: 37px;
+	margin-bottom: 2px;
+	display:block;
+	
+	
+}
+
+#menu a {
+ font: bold 25 px Verdana, Arial, Tahoma;
+ Color: #ffffff;
+padding: 5px 25px;
+text-decoration: none;
+background: #76CDE2;
+
+
+}
+#menu2 a {
+ 
+
+ Color: #ffffff;
+padding: 9px 40px;
+text-decoration: none;
+background: #5768FD;
+
+
+
+
+}
+
+#menu a:hover{
+
+color: #000000;
+background: #238E9A
+
+}
+#menu2 a:hover{
+
+color: #ffffff;
+background: #09128A;
+font-weight: bold;
+
+}
+
+.menu-parado{
+		position: absolute;
+		border-width: 1px;
+		border-style: none;
+		height: 220px;
+		width: 260px;
+		bottom: 150px;
+		left: 1050px;
+		
+		}
+
+form.login{
+position: absolute;
+right: 96px;
+top: 80px;
+
+}
+
+
+body{
+background-color: #DAF1F8;
+
+}
+
+.btnEntrar{
+	
+	font-family:Calibri, Arial, sans-serif;
+	color:#fff;
+	margin-top:10px;
+	font-weight:bold;
+	background-image:url(img/btn.jpg);
+	border: solid 0px;
+	font-size:12px;
+}
+
+.btnCadastrar{
+	
+	font-family:Calibri, Arial, sans-serif;
+	color:#fff;
+	margin-top:10px;
+	font-weight:bold;
+	background-image:url(img/btn.jpg);
+	border: solid 0px;
+	font-size:12px;
+}
+
+#titulo1{
+background-color: #5C9AF8;
+
+}
+#titulo1:hover{
+font-weight:bold;
+text-transform: uppercase;
+color:blue;
+	
+}
+.livros{
+		position: relative;
+		border-width: 1px;
+		border-style: solid;
+		border-color: black;
+		height: 360px;
+		width: 360px;
+		
+
+}
+
+	.textolivros{
+		clear: right;
+	
+	}
+	#livrohtml{
+		position: relative;
+		top: 150 px;
+	
+	}
+	#picture {
+		float:left;
+		width: 150px;
+	}
+	
+	#picture2 {
+		float:left;
+		width: 150px;
+	}
+	
+	#picture3 {
+		float:left;
+		width: 150px;
+	}
+	
+	#picture4 {
+		float:left;
+		width: 150px;
+	}
+	#picture5 {
+		float:left;
+		width: 150px;
+	}
+	
+	#picture6 {
+		float:left;
+		width: 150px;
+	}
+	#picture7 {
+		float:left;
+		width: 330px;
+	}
+	
+	.livros2{
+		position: absolute;
+		border-width: 1px;
+		border-style: solid;
+		border-color: black;
+		height: 360px;
+		width: 360px;
+		bottom: 200px;
+		left: 371px;
+		
+
+}
+
+.livros3{
+		position: absolute;
+		border-width: 1px;
+		border-style: solid;
+		border-color: black;
+		height: 360px;
+		width: 360px;
+		bottom: -162px;
+		left: 371px;
+		
+
+}
+
+.livros4{
+		position: absolute;
+		border-width: 1px;
+		border-style: solid;
+		border-color: black;
+		height: 360px;
+		width: 360px;
+		bottom: 200px;
+		left: 735px;
+		
+
+}
+
+.livros5{
+		position: absolute;
+		border-width: 1px;
+		border-style: solid;
+		border-color: black;
+		height: 360px;
+		width: 360px;
+		bottom: -162px;
+		left: 735px;
+		
+
+}
+
+.destaque{
+		position: absolute;
+		
+		border-style: none;
+		
+		height: 600px;
+		width: 1000px;
+		bottom: -350px;
+		left: 20px;
+		
+
+}
+#livrolink {
+
+text-decoration: none;
+
+}
+#livrolink:hover{
+
+color: #012396;
+
+font-weight: bold;
+
+}
+#cadastro{
+position:absolute;
+right: -70px;
+top: 0px;
+}
+	
+	
