@@ -1,0 +1,84 @@
+ <!DOCTYPE HTML>
+   <html lang="pt-br">
+   <head>
+   	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   	
+   	<title>Armazenamento-TRADUTOR</title>
+        
+        <script type="text/javascript">
+            
+            //http://tableless.com.br/utilizando-navigator-language/
+            //http://www.devmedia.com.br/html5-storage-armazenando-dados-com-html5/28797
+            //http://zenorocha.com/html5-local-storage/
+            //http://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045
+            //http://pt.stackoverflow.com/questions/2882/como-controlar-quando-os-dados-do-localstorage-expiram
+            //
+            function Recebe_valores() {
+            //A presente função armazena valores de sessao que so duram enquanto o avegador estiver sendo executado
+            
+            sessionStorage.setItem("texto1", document.form1.text1.value);
+            sessionStorage.setItem("texto2", document.form1.text2.value);
+            sessionStorage.setItem("texto3", document.form1.text3.value);
+            
+            
+            }
+            
+            function Pegavalor1() {
+            
+            alert("O valor do campo 1 é: " + sessionStorage.getItem("texto1"));
+            
+            }
+            
+            function Pegavalor2() {
+                alert("O valor do campo 2 é: " + sessionStorage.getItem("texto2"));
+            }
+            
+             function Pegavalor3() {
+                alert("O valor do campo 2 é: " + sessionStorage.getItem("texto3"));
+            }
+            
+        </script>
+        
+        <style type="text/css">
+            #div1 {
+    height: 165px;
+    width: 400px;
+    background-color: #00BFFF;
+    border-radius: 5px;
+                }
+            
+        </style>
+        
+        
+   </head>
+   <body>
+  	
+        <div id="div1">
+            
+            <form name="form1">
+<input type="text" name="text1" placeholder="Digite texto...">
+<br>
+<input type="text" name="text2" placeholder="Digite texto...">
+<br>
+<input type="text" name="text3" placeholder="Digite texto...">
+<br>
+<input type="button" value="Recebe os valores" onClick="Recebe_valores()">
+<br>
+<input type="button" value="Mostra valor 1" onClick="Pegavalor1()">
+<br>
+<input type="button" value="Mostra valor 2" onClick="Pegavalor2()">
+<br>
+<input type="button" value="Mostra valor 3" onClick="Pegavalor3()">
+<br>
+
+
+
+
+            
+        </div>
+        
+        
+        
+        
+  </body>
+  </html>

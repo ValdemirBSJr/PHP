@@ -1,0 +1,245 @@
+/*
+ABAIXO TEMOS COMO MONTAR O MENU SÓ COM CSS E DEPOIS TEMOS AS CONFIGURAÇÕES PARA FAZE-LO FUNCIONAR
+
+<nav>
+  <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+            <li><a href="#">O que fazemos?</a>
+                <ul>
+                      <li><a href="#">Web Design</a></li>
+                      <li><a href="#">SEO</a></li>
+                      <li><a href="#">Design</a></li>                    
+                </ul>
+            </li>
+        <li><a href="#">Links</a></li>
+        <li><a href="#">Contato</a></li>                
+</ul>
+</nav>
+
+*/
+
+/*Removendo bullets e colocando borda*/
+
+*{margin: 0; padding: 0;}
+ 
+body
+{
+font-family: arial, helvetica, sans-serif;
+font-size: 12px;
+}
+ 
+ 
+.menuhorizontal
+{
+list-style:none;
+border:1px solid #c0c0c0;
+float:left;
+}
+
+
+/*Estilizando itens do menu*/
+.menuhorizontal li
+{
+position:relative;
+float:left;
+border-right:1px solid #c0c0c0;
+}
+/*Estilizando links
+Agora vamos estilizar os links, você pode ficar à vontade em estilizar os links de acordo com o seu gosto e layout. Neste exemplo eu inseri uma propriedade chamada text-shadow e box-shadow, do CSS3, caso você esteja usando um navegador atualizado, poderá ver essa propriedade em ação.
+
+*/
+
+.menuhorizontal li a{color:#333; text-decoration:none; padding:5px 10px; display:block;}
+ 
+.menuhorizontal li a:hover
+{
+background:#000066;
+color:#fff;
+-moz-box-shadow:0 3px 10px 0 #CCC;
+-webkit-box-shadow:0 3px 10px 0 #ccc;
+text-shadow:0px 0px 5px #fff;
+}
+
+/* Escondendo submenu */
+.menuhorizontal li  ul{
+position:absolute;
+top:25px;
+left:0;
+background-color:#fff;
+display:none;
+}  
+
+/* Exibindo submenu */
+
+.menuhorizontal li:hover ul, .menuhorizontal li.over ul{display:block;}
+
+/* Ajustes finais */
+
+.menuhorizontal li ul li{
+border:1px solid #c0c0c0;
+display:block;
+width:150px;
+}
+
+textarea { 
+    resize: none; 
+}
+
+/*ABAIXO TEMOS OS CAMPOS DE LOGIN E CONF DE ID LOCALIZAÇÃO E ETC*/
+
+#login_tela
+{
+	position:absolute;
+	top: 200px;
+	left: 350px;
+	font-family: arial, verdana, sans-serif;
+	font-weight: bold;
+
+}
+
+/*ABAIXO TEMOS A CONFIGURAÇÃO DO BOTÃO*/
+
+.btnLogin
+{
+background: #666 url('btnEntrar.png') no-repeat;
+ cursor:pointer;
+width: 90px; 
+ height: 30px;
+ border: none;
+font-size:small;
+ font-weight:bold;
+ color:white;
+ font-family:tahoma,arial,sans-serif;
+}
+
+.btnLogin:hover
+{
+background: #666 url('btnEntrarMouse.png') no-repeat;
+
+ color:black;
+ 
+}
+
+
+
+/*ABAIXO TEMOS A CONFIGURAÇÃO h1*/
+
+
+h1
+{
+font-family: arial, verdana, sans-serif;
+background-color: #0099FF;
+color: white;
+
+}
+
+/*Eventos do botão enviar*/
+#atualizar
+{
+background: #666 url('btn atualizar.png') no-repeat;
+ cursor:pointer;
+width: 100px; 
+ height: 30px;
+ border: none;
+font-size:small;
+ font-weight:bold;
+ color:white;
+ font-family:tahoma,arial,sans-serif;
+}
+#atualizar:hover
+{
+background: #666 url('btn atualizaMouse.png') no-repeat;
+ color:black;
+}
+
+#atualizar:active /*aqui é quando clica o botão só funciona com id e butão*/
+{
+color: red;
+}
+
+#busca_comeca
+{
+background: #666 url('btn atualizar.png') no-repeat;
+ cursor:pointer;
+width: 100px; 
+ height: 30px;
+ border: none;
+font-size:small;
+ font-weight:bold;
+ color:white;
+ font-family:tahoma,arial,sans-serif;
+}
+#busca_comeca:hover
+{
+background: #666 url('btn atualizaMouse.png') no-repeat;
+ color:black;
+}
+
+#busca_comeca:active /*aqui é quando clica o botão só funciona com id e butão*/
+{
+color: red;
+}
+
+a:hover
+{
+font-weight:bold;
+color: red;
+}
+
+h3
+{
+
+font-family: arial, verdana, sans-serif;
+color: red;
+}
+
+h2
+{
+font-family: arial, verdana, sans-serif;
+color: gray;
+}
+
+p
+{
+font-family: arial, verdana, sans-serif;
+font-weight:bold;
+}
+
+#enviar
+{
+background: #666 url('btn atualizar.png') no-repeat;
+ cursor:pointer;
+width: 100px; 
+ height: 30px;
+ border: none;
+font-size:small;
+ font-weight:bold;
+ color:white;
+ font-family:tahoma,arial,sans-serif;
+}
+#enviar:hover
+{
+background: #666 url('btn atualizaMouse.png') no-repeat;
+ color:black;
+}
+
+#enviar:active /*aqui é quando clica o botão só funciona com id e butão*/
+{
+color: red;
+}
+
+label
+{
+font-family: arial, verdana, sans-serif;
+	font-weight: bold;
+}
+
+/*FORM DO USUÁRIO LOCALIZAÇÃO*/
+#formuser
+{
+	position:absolute;
+	top: 180px;
+	left: 200px;
+}
+

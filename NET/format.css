@@ -1,0 +1,111 @@
+.menuhorizontal{
+margin: 0;
+padding: 0;
+width: auto;
+height: 30px;
+}
+
+/*definições gerais do menu*/
+
+.menuhorizontal ul{
+list-style: none;
+}
+
+/*retirar o estilo das listas*/
+
+.menuhorizontal li{
+display: inline;
+float: left;
+padding:0px;
+margin: 0;
+width: 120px; /*Aqui é o tamanho do botão*/
+border-left: #666666 thin solid;
+
+}
+
+/*formatar a lista. Definir o tamanho do botão, o seu posicionamento e display: inline por ser um menu horzontal*/
+
+.menuhorizontal a{
+display: block;
+text-decoration: none;
+padding: 6px;
+background-color: #0066FF ;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-weight: bold;
+color: #FFFFFF; /*aqui é a cor do texto do menu*/
+
+}
+
+/* formatação da âncora e área clicável*/
+
+.menuhorizontal :hover{
+background-color: #EEEEEE;
+text-decoration: none;
+color: #000000;
+}
+
+/*formatação do estado :hover*/
+
+.menuhorizontal li.btnesquerdo{
+border: none;}
+
+/*text area sem redimensionar*/
+
+textarea { 
+    resize: none; 
+}
+
+/*ABAIXO TEMOS OS CAMPOS DE LOGIN E CONF DE ID LOCALIZAÇÃO E ETC*/
+
+#login_tela
+{
+	position:absolute;
+	top: 200px;
+	left: 350px;
+	font-family: arial, verdana, sans-serif;
+	font-weight: bold;
+}
+
+/*ABAIXO TEMOS A CONFIGURAÇÃO DO BOTÃO*/
+
+.btnLogin
+{
+background: #666 url('btnEntrar.png') no-repeat;
+ cursor:pointer;
+width: 90px; 
+ height: 30px;
+ border: none;
+font-size:small;
+ font-weight:bold;
+ color:white;
+ font-family:tahoma,arial,sans-serif;
+}
+
+.btnLogin:hover
+{
+background: #666 url('btnEntrarMouse.png') no-repeat;
+
+ color:black;
+ 
+}
+
+
+/*ABAIXO TEMOS A CONFIGURAÇÃO h1*/
+
+
+h1
+{
+font-family: arial, verdana, sans-serif;
+background-color: #0099FF;
+color: white;
+
+ 
+}
+
+
+
+
+
+
+

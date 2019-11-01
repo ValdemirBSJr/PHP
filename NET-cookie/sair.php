@@ -1,0 +1,9 @@
+<?php
+setcookie("Est_logado"); //condição para estar logado
+setcookie("Id_logado"); //aqui é o perfil
+setcookie("Id_usuario");
+
+
+echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=http://www.psiti.w.pw/testenet/index.html">';
+
+?>
