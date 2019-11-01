@@ -1,0 +1,18 @@
+http://forum.imasters.com.br/topic/430691-inserir-array-php-no-banco-mysql/
+http://forum.imasters.com.br/topic/530230-salvar-dados-de-um-array-e-formularios-em-um-bd-mysql/
+http://forum.imasters.com.br/topic/512998-como-gravar-array-foreach-dentro-do-mysql/
+
+---- ARRAYS ----
+
+http://br.php.net/array_push
+http://forum.imasters.com.br/topic/419833-adicionar-array-em-session-com-php/
+http://www.arquivodecodigos.net/dicas/php-colocando-e-recuperando-arrays-em-sessoes-php-2218.html
+http://php.net/manual/pt_BR/book.array.php
+
+------------ RECUPERA E APAGA ARRAY -------------
+http://pt.stackoverflow.com/questions/27445/removendo-um-elemento-espec%C3%ADfico-em-um-array
+https://pt.wikibooks.org/wiki/Aplicativos_em_PHP/Trabalhando_em_PHP_com/Arrays
+http://php.net/manual/pt_BR/function.array-key-exists.php
+http://forum.imasters.com.br/topic/279283-resolvidoapagar-indice-array/
+
+

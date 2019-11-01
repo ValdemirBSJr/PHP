@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Locadora TM</title>
+    <link rel="shortcut icon" href="../img/favicon.ico"type="image/x-icon"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    
+     <script>
+        //abaixo as 2 funções que movem a tela pelos botões
+        $(document).ready(function (){
+            $("#click").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#div1").offset().top
+                    }, 2000);
+                //});
+            });
+        });
+        
+        $(document).ready(function (){
+            $("#click1").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#div2").offset().top
+                    }, 2000);
+                //});
+            });
+        });
+    </script>
+    
+</head>
+
+<body>
+ <div class="jumbotron" id="div2">
+        <div class="container">
+            <h1>Bem-vindo ao "Telecine Mozer"!</h1>
+            <p>A forma mais simples de assistir seus filmes on-line!</p>
+            <p><a class="btn btn-primary btn-lg" role="button" id="click">Saiba mais &raquo;</a></p>
+        </div>
+    </div>
+ 
+ <div class="col-md-6 col-md-offset-3">
+        <form action="php/entrar.php" id="contact-form" class="form-horizontal" role="form" method="post">
+            <div class="form-group" id="name-field">
+                <label for="form-name" class="col-lg-2 control-label">Login</label>
+                <div class="col-lg-10">
+                    <input type="text" class="input-medium" id="form-name" name="form-name" placeholder="Login" required autofocus>
+                </div>
+            </div>
+            <div class="form-group" id="email-field">
+                <label for="form-email" class="col-lg-2 control-label">Senha</label>
+                <div class="col-lg-10">
+                    <input type="password" class="input-medium" id="form-email" name="form-senha" placeholder="Senha"  required>
+                </div>
+            </div>
+            <div class="form-group" id="subject-field">
+                <label for="form-subject" class="col-lg-2 control-label">Cód. Mensal</label>
+                <div class="col-lg-10">
+                    <input type="password" class="input-medium" id="form-subject" name="form-mensal"  placeholder="Código mensal">
+                </div>
+            </div>
+         
+     <label>Entrar como:
+<select name="opcaoLogin"    size="1">
+<option value="1" selected>Cliente</option>
+<option value="2">Administrador</option>
+</select>
+</label>
+         
+          <br>
+           <a href='#'>Esqueceu a senha?&nbsp &nbsp</a>
+            <a href='#'>Não sabe a senha mensal?</a><br>
+          
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button type="submit" class="btn btn-default">
+                        Entrar
+                    </button>
+                </div>
+            </div>
+           
+            
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                
+                
+            <div id="div1"><footer><h3>QUEM SOMOS NÓS: Telecine Mozer  é um sistema WEB que possibilita a compra de filmes, ou seja, direito de assistir ums única vez. Tenha em mãos seu código mensal, e bom entreterimento!</h3></footer></div>
+            <p><a class="btn btn-primary btn-sm" role="button" id="click1">Topo</a></p>
+        </form>
+    </div>
+
+
+</body>
+</html>
