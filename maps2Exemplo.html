@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+
+<br />
+<script src="http://maps.google.com/maps?file=api&v=2.x&key=ABQIAAAAVr5mPPLDy_bfjIr5EGw_YRQJJTmMFgh90lBDn52esDHY_5eerhR4K2UH2MlX9dgLKYgdvssFxiowiQ"
+            type="text/javascript"></script><br />
+<br  /><br />
+<div id="mapa" style="z-index: 102; width: 600px; height: 300px; "> </div><br />
+<br />
+<script language="javascript">
+var map;
+function initialize()
+{
+   // Carrega o Google Maps
+    if (GBrowserIsCompatible()) {
+            map = new GMap2(document.getElementById("mapa"));
+            map.setCenter(new GLatLng(-25.429722,-49.271944), 11)
+            
+            // Cria o objeto de roteamento
+             var dir = new GDirections(map);
+             var pt1 = document.getElementById("ponto1").value
+             var pt2 = document.getElementById("ponto2").value
+             // Carrega os pontos dados os endereços
+            dir.loadFromWaypoints([pt1,pt2], {locale:"pt-br", getSteps:true});
+           // O evento load do GDirections é executado quando chega o resultado do geocoding.
+           GEvent.addListener(dir,"load", function() {
+                for (var i=0; i<dir.getNumRoutes(); i++) {
+                          var route = dir.getRoute(i);
+                          var dist = route.getDistance()
+                          alert("Distância é de: " + (dist.meters / 1000) + " km")
+                 }
+           });
+
+        }
+}
+</script><br />
+Ponto 1:<input  type="text" id="ponto1" size="40" value="Rua Professor Algacyr Munhoz Mader, 3775, Curitiba, Parana, Brasil" /><br  /><br />
+Ponto 2: <input  type="text" id="ponto2" size="40" value="Rua Imaculada Conceicao, 1155, Curitiba, Parana, Brasil" /><br  /><br />
+<input  type="button" onclick="initialize()" value="Calcular Distância" /><br />
+
+</body>
+</html>

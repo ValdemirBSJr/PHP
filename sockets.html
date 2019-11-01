@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <title>Websocket.org Echo client</title>
+</head>
+ 
+<body>
+  <h2>Websocket.org Echo client</h2>
+  <div id='output' />
+ 
+  <script>
+    var setup = function () {
+      output = document.getElementById('output');
+      socket = new WebSocket('ws://echo.websocket.org/echo');
+ 
+      socket.onopen = function(e) {
+        log('Connected');
+        send('Hello World from WebSocket');
+      };
+ 
+      socket.onclose = function(e) {
+        log('Disconnected');
+      };
+ 
+      socket.onerror = function(e) {
+        log('Error');
+      };
+ 
+      socket.onmessage = function (e) {
+        log('Message received: ' + e.data);
+        socket.close();
+      };
+    };
+ 
+    var send = function(msg) {
+      socket.send(msg);
+      log('Message sent: ' + msg);
+    };
+ 
+    var log = function(s) {
+      var p = document.createElement('p');
+      p.textContent = s;
+      output.appendChild(p);
+ 
+      console.log(s);
+    };
+ 
+    setup();
+ 
+  </script>  
+</body>
+ 
+</html>
